@@ -38,12 +38,18 @@ namespace ChallengeSets
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+            string greeting = $"Hello, {nameOfPerson}!";
+            string greeting2 = "Hello!";
+            if (nameOfPerson == "")
+            {
+                return greeting2;
+            }
+            return greeting;
         }
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            return "HEY!";
         }
     }
 }
