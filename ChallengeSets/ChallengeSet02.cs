@@ -8,16 +8,18 @@ namespace ChallengeSets
     {
         public bool CharacterIsALetter(char c)
         {
-            if (c >= 'A' && c <= 'Z' ||
-                c >= 'a' && c <= 'z')
-                return true;
-            else
-                return false;
+            //if (c >= 'A' && c <= 'Z' ||
+            //    c >= 'a' && c <= 'z')
+            //    return true;
+            //else
+            //    return false;
+
+            return char.IsLetter(c);
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            throw new NotImplementedException();
+            return (vals.Length % 2 == 0 ? true : false);
         }
 
         public bool IsNumberEven(int number)
