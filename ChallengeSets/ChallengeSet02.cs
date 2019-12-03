@@ -65,9 +65,13 @@ namespace ChallengeSets
 
         public int Sum(int[] numbers)
         {
+            if (numbers == null)
+            {
+                return 0;
+            }
+
             int sum1 = numbers.Sum();
             return sum1;
-            // not returning 0,null
         }
 
         public int SumEvens(int[] numbers)
