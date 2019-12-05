@@ -28,10 +28,7 @@ namespace ChallengeSets
             {
                 return true;
             }
-            else
-            {
                 return false;
-            }
         }
 
         public bool IsNumberOdd(int num)
@@ -40,15 +37,16 @@ namespace ChallengeSets
             {
                 return true;
             }
-            else
-            {
                 return false;
-            }
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return 0;
+            }
+            return numbers.Max() + numbers.Min();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -57,10 +55,7 @@ namespace ChallengeSets
             {
                 return str1.Length;
             }
-            else
-            {
                 return str2.Length;
-            }
         }
 
         public int Sum(int[] numbers)
