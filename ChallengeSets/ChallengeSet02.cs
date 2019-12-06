@@ -8,12 +8,6 @@ namespace ChallengeSets
     {
         public bool CharacterIsALetter(char c)
         {
-            //if (c >= 'A' && c <= 'Z' ||
-            //    c >= 'a' && c <= 'z')
-            //    return true;
-            //else
-            //    return false;
-
             return char.IsLetter(c);
         }
 
@@ -28,7 +22,7 @@ namespace ChallengeSets
             {
                 return true;
             }
-                return false;
+            return false;
         }
 
         public bool IsNumberOdd(int num)
@@ -37,15 +31,16 @@ namespace ChallengeSets
             {
                 return true;
             }
-                return false;
+            return false;
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            if (numbers == null)
+            if (numbers == null || numbers.Count() == 0)
             {
                 return 0;
             }
+
             return numbers.Max() + numbers.Min();
         }
 
@@ -55,7 +50,7 @@ namespace ChallengeSets
             {
                 return str1.Length;
             }
-                return str2.Length;
+            return str2.Length;
         }
 
         public int Sum(int[] numbers)
@@ -71,17 +66,45 @@ namespace ChallengeSets
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return 0;
+            }
+
+            int sum = 0;
+            foreach (int num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    sum += num;
+                }
+            }
+            return sum;
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+
+            if (numbers == null)
+            {
+                return false;
+            }
+            int sum = numbers.Take(numbers.Count()).Sum();
+            return sum % 2 == 0 ? false : true;
+
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            long oddsCount = 0;
+            for (long i = 0; i < number; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    oddsCount++;
+                }
+            }
+            return oddsCount;
         }
 
 
