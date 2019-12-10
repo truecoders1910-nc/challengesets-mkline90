@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 namespace ChallengeSets
 {
     public class ChallengeSet04
@@ -6,12 +7,18 @@ namespace ChallengeSets
         public int AddEvenSubtractOdd(int[] numbers)
         {
             throw new NotImplementedException();
-            //Something here
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
+            // Declaration of the array
+            string[] stringArray;
+
+            // Initialization of array
+            stringArray = new string[4] { str1, str2, str3, str4 };
+
+            int shortestString = stringArray.Min(w => w.Length);
+            return shortestString;
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
