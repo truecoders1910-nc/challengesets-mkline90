@@ -6,6 +6,7 @@ namespace ChallengeSets
         public int AddEvenSubtractOdd(int[] numbers)
         {
             throw new NotImplementedException();
+            //Something here
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
