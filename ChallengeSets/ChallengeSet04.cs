@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 namespace ChallengeSets
 {
     public class ChallengeSet04
@@ -37,7 +38,9 @@ namespace ChallengeSets
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            throw new NotImplementedException();
+            int[] smallNumber;
+            smallNumber = new int[4] { number1, number2, number3, number4 };
+            return smallNumber.Min();
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
