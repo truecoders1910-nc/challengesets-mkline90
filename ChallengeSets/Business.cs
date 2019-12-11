@@ -13,5 +13,10 @@ namespace ChallengeSets
         {
             throw new NotImplementedException();
         }
+
+        public static implicit operator Business(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

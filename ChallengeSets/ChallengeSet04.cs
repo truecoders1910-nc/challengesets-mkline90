@@ -46,6 +46,7 @@ namespace ChallengeSets
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
             throw new NotImplementedException();
+
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
@@ -65,7 +66,28 @@ namespace ChallengeSets
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+
+            double sum = 0;
+            int amountOfEven = 0;
+            foreach (var item in numbers)
+            {
+                if (item % 2 == 0)
+                {
+                    sum += item;
+                    amountOfEven++;
+                }
+            }
+            if (amountOfEven == 0)
+            {
+                return 0;
+            }
+
+            double average = sum / amountOfEven;
+            return average;
         }
 
         public int Factorial(int number)
