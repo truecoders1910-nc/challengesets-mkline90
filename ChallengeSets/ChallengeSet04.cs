@@ -70,7 +70,20 @@ namespace ChallengeSets
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            int count = objs.Length;
+            int nullCount = 0;
+            foreach (var obj in objs)
+            {
+                if (obj == null)
+                {
+                    nullCount++;
+                }
+            }
+            if (nullCount > count / 2)
+            {
+                return true;
+            }
+            return false;
         }
 
         public double AverageEvens(int[] numbers)
@@ -101,6 +114,7 @@ namespace ChallengeSets
 
         public int Factorial(int number)
         {
+            if (number < 0) throw new ArgumentOutOfRangeException();
             if (number == 0)
             {
                 return 1;
